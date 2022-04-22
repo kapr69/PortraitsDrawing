@@ -1,5 +1,4 @@
-﻿
-namespace PortraitsDrawing.MyObjects
+﻿namespace PortraitsDrawing.MyObjects
 {
     public class Pose
     {
