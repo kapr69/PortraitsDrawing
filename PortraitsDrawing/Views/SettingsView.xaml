@@ -1,0 +1,74 @@
+﻿<local:IocControl x:Class="PortraitsDrawing.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PortraitsDrawing.Views"
+             xmlns:viewmodels="clr-namespace:PortraitsDrawing.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200" Background="#2C2C50"
+                   d:DataContext="{d:DesignInstance viewmodels:SettingsViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+                    <Label Content="Rozmazání"
+                   FontSize="30"
+                   Foreground="#D0D0E5"
+                   FontWeight="Medium"
+                   Margin="0,0,0,0"/>
+                    <Slider Background="#0F0F2D"
+                            Minimum="0"
+                            Maximum="10"
+                            LargeChange="1"
+                            SmallChange="1"
+                            Value="{Binding Blur}"/>
+                    <Label Content="Prahovací mez hran 1"
+                   FontSize="30"
+                   Foreground="#D0D0E5"
+                   FontWeight="Medium"
+                   Margin="0,0,0,0"/>
+                    <Slider Background="#0F0F2D"
+                            Minimum="0"
+                            Maximum="100"
+                            Value="{Binding CannyMax}"/>
+                    <Label Content="Prahovací mez hran 2"
+                   FontSize="30"
+                   Foreground="#D0D0E5"
+                   FontWeight="Medium"
+                   Margin="0,0,0,0"/>
+                    <Slider Background="#0F0F2D"
+                            Minimum="0"
+                            Maximum="100"
+                            Value="{Binding CannyMin}"/>
+                    <Label Content="Míra aproximace hrany"
+                   FontSize="30"
+                   Foreground="#D0D0E5"
+                   FontWeight="Medium"
+                   Margin="0,0,0,0"/>
+                    <Slider Background="#0F0F2D"
+                            Minimum="0"
+                            Maximum="10"
+                            Value="{Binding Aproximation}"/>
+                    
+                </StackPanel>
+                <Image Grid.Column="1" Grid.Row="0" Margin="10,0,10,10" Source="{Binding ImgPreview}" HorizontalAlignment="center" Height="auto" VerticalAlignment="center" Width="auto"/>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</local:IocControl>
