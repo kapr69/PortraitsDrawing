@@ -23,6 +23,8 @@ namespace PortraitsDrawing.Camera
 
         public bool IsRunning { get; set; }
 
+        public int MyProperty { get; set; }
+
 
         public int X { get; }
         public int Y { get; }
