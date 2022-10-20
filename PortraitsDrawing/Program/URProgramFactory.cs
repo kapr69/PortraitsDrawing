@@ -78,7 +78,7 @@ namespace PortraitsDrawing.Program
             //definice workobjectu - dodelat
             output += "global Plane_2=p[-0.164925,-0.558607,0.136545,-1.17372,-2.781833,0.379414]";
 
-            output += $"movel(pose_trans(Plane_2, p[0,0,0,2.2628,-2.3495,-0.1884]), a=1.0, v=0.05)";
+            output += $"movel(pose_trans(Plane_2, p[0,0,0,2.2628,-2.3495,-0.1884]), a=1.0, v=0.10)";
 
             for (int i = 0; i < input.Count; i++)
             {
@@ -90,11 +90,11 @@ namespace PortraitsDrawing.Program
 
                     if (j == 0 || j == input[i].Count - 1)//predelat
                     {
-                        output += "movel(pose_trans(Plane_2, p[" + x + "," + y + "," + z + ",2.2628,-2.3495,-0.1884]), a=1.0, v=0.05)";
+                        output += "movel(pose_trans(Plane_2, p[" + x + "," + y + "," + z + ",2.2628,-2.3495,-0.1884]), a=1.0, v=0.10)";
                     }
                     else
                     {
-                        output += "movel(pose_trans(Plane_2, p[" + x + "," + y + "," + "0.002" + ",2.2628,-2.3495,-0.1884]), a=1.0, v=0.05)";
+                        output += "movel(pose_trans(Plane_2, p[" + x + "," + y + "," + "0.002" + ",2.2628,-2.3495,-0.1884]), a=1.0, v=0.10)";
                     }
                 }
             }

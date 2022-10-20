@@ -17,6 +17,9 @@ namespace PortraitsDrawing.LineFactory
             _pointsMapper = pointsMapper;
             //bude potreba device provider
             Format = new Format();
+            //predelat
+            //Format.X = 200;
+            //Format.Y = 137;
             Format.X = 200;
             Format.Y = 137;
         }
